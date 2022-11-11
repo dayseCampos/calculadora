@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #7c647c;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: #1b0e2c;
+  color: #eee;
+}
+
+.grid-container > button:hover {
+  background-color: #9d8fa8;
+  color: #1b0e2c;
+}
+
+.grid-container > .operador {
+  background: #ba264a;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.grid-container > .output {
+  grid-column: 1 / -1;
+  background-color: #24133a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.grid-container > .output > .anterior {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.grid-container > .output > .atual {
+  color: #fff;
+  font-size: 2.5rem;
+}
